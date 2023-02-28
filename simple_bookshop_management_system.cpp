@@ -69,7 +69,7 @@ int book::search(char enteredtitle[30], char enteredauthor[30]){
 	    
            return 1;
 
-	else
+    else
 	   return 0;
 
 	}
@@ -77,7 +77,7 @@ int book::search(char enteredtitle[30], char enteredauthor[30]){
 void book::buybook(){
     int count;
     cout<<"\nEnter the number of the books to you want to buy: ";
-	cin>>count; 
+    cin>>count; 
 
 	if(count<=*stock){
           *stock=*stock-count;
@@ -108,14 +108,14 @@ void book::buybook(){
 
         switch(choice){
 
-         case 1:
+          case 1:
 		  B[i]=new book;
 		  B[i]->newdata();
 		  ++i;
 	      break;
 
 		
-		 case 2:
+          case 2:
 		  cin.ignore();
 		  cout<<"\nEnter the title of the book: ";
 		  cin.getline(enteredtitle,30);
@@ -132,7 +132,7 @@ void book::buybook(){
 
 				break;
 
-		 case 3: 
+	  case 3: 
 		        cin.ignore();
 				cout<<"\nEnter the title of the book: "; 
 				cin.getline(enteredtitle,30);
@@ -151,7 +151,7 @@ void book::buybook(){
 				break;
 
 
-	     case 4: 
+	 case 4: 
 		        cin.ignore();
 				cout<<"\nEnter the title of the book: "; 
 				cin.getline(enteredtitle,30);
@@ -169,10 +169,10 @@ void book::buybook(){
 				cout<<"\nThis book is not in stock";
 				break;
 
-		 case 5: exit(0);
+        case 5: exit(0);
 
 
-		 default: cout<<"\nInvalid choice entered!";
+	default: cout<<"\nInvalid choice entered!";
 
 		}
 	}
