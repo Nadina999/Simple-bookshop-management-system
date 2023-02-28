@@ -54,11 +54,11 @@ void book::editdata(){
 }
 
 void book::showdata()	{
-	cout<<"\nAuthor Name: "<<author;
-	cout<<"\nTitle Name: "<<title;
-	cout<<"\nPublisher Name: "<<publisher;
-	cout<<"\nPrice: "<<*price;
-	cout<<"\nStock Position: "<<*stock;
+    cout<<"\nAuthor Name: "<<author;
+    cout<<"\nTitle Name: "<<title;
+    cout<<"\nPublisher Name: "<<publisher;
+    cout<<"\nPrice: "<<*price;
+    cout<<"\nStock Position: "<<*stock;
 
 }
 
@@ -66,7 +66,8 @@ void book::showdata()	{
 int book::search(char enteredtitle[30], char enteredauthor[30]){
 
     if(strcmp(enteredtitle,title)==0 && strcmp(enteredauthor,author)==0)
-       return 1;
+	    
+           return 1;
 
 	else
 	   return 0;
@@ -79,21 +80,21 @@ void book::buybook(){
 	cin>>count; 
 
 	if(count<=*stock){
-     *stock=*stock-count;
-	 cout<<"\nBooks bought succesfully!";
-	 cout<<"\nAmount: "<<(*price)*count;
+          *stock=*stock-count;
+	  cout<<"\nBooks bought succesfully!";
+	  cout<<"\nAmount: "<<(*price)*count;
 	  }
 
     else
 
-     cout<<"\nRequired books not in stock: ";
+          cout<<"\nRequired books not in stock: ";
 
 	}
 
 
  int main(){
-     book *B[20];
-	 int i=0,r,t,choice;
+         book *B[20];
+	 int i=0,t,choice;
 	 char enteredtitle[30],enteredauthor[30];
 	 while(1)	{
 		cout<<"\n\n======Book Shop Management System======"
